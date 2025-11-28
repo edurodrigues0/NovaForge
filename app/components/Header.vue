@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import NavSocialGroup from "./NavSocialGroup.vue";
+import MobileMenu from "./MobileMenu.vue";
 </script>
 
 <template>
@@ -7,24 +8,36 @@ import NavSocialGroup from "./NavSocialGroup.vue";
     <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold select-none font-orbitron whitespace-nowrap">
       Nova Forge
     </h1>
+    
+    <!-- Desktop Navigation -->
     <nav class="hidden lg:flex gap-4 xl:gap-8 items-center">
-      <NuxtLink class="text-slate-300 hover:text-slate-100 whitespace-nowrap text-sm xl:text-base" to="/">
-        Smart Contracts
-      </NuxtLink>
-      <NuxtLink class="text-slate-300 hover:text-slate-100 whitespace-nowrap text-sm xl:text-base" to="/projects">
-        Services
-      </NuxtLink>
-      <NuxtLink class="text-slate-300 hover:text-slate-100 whitespace-nowrap text-sm xl:text-base" to="/projects">
-        Solutions
-      </NuxtLink>
-      <NuxtLink class="text-slate-300 hover:text-slate-100 whitespace-nowrap text-sm xl:text-base" to="/projects">
-        Roadmap
-      </NuxtLink>
-      <NuxtLink class="text-slate-300 hover:text-slate-100 whitespace-nowrap text-sm xl:text-base">
-        Contact Us
-      </NuxtLink>
+      <a class="text-slate-300 hover:text-slate-100 whitespace-nowrap text-sm xl:text-base transition-colors cursor-pointer" href="#about">
+        Sobre Nós
+      </a>
+      <a class="text-slate-300 hover:text-slate-100 whitespace-nowrap text-sm xl:text-base transition-colors cursor-pointer" href="#solutions">
+        Soluções
+      </a>
+      <a class="text-slate-300 hover:text-slate-100 whitespace-nowrap text-sm xl:text-base transition-colors cursor-pointer" href="#features">
+        Diferenciais
+      </a>
+      <a class="text-slate-300 hover:text-slate-100 whitespace-nowrap text-sm xl:text-base transition-colors cursor-pointer" href="#cases">
+        Cases
+      </a>
+      <a 
+        href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um diagnóstico técnico gratuito."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold py-2 px-4 rounded transition-colors inline-flex items-center gap-2"
+      >
+        <Icon name="uil:whatsapp" class="w-4 h-4" />
+        Agendar Diagnóstico
+      </a>
     </nav>
 
-    <NavSocialGroup class="flex-shrink-0" />
+    <!-- Mobile & Social -->
+    <div class="flex items-center gap-4">
+      <NavSocialGroup class="hidden sm:flex flex-shrink-0" />
+      <MobileMenu />
+    </div>
   </header>
 </template>
