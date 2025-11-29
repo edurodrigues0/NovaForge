@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const iconSizeClass = 'w-10 h-10'
 </script>
 
 <template>
