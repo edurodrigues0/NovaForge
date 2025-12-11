@@ -31,11 +31,16 @@ onMounted(() => {
                 <div id="stars3" :style="{ boxShadow: shadowsBig }"></div>
             </div>
 
-            <!-- Conteúdo visível (Header + slot) -->
+            <!-- Conteúdo visível dentro do arco (Header + hero) -->
             <div class="content-wrapper">
                 <Header />
-                <slot />
+                <slot name="hero" />
             </div>
+        </div>
+
+        <!-- Conteúdo fora do arco (restante da LP) -->
+        <div class="relative z-10">
+            <slot />
         </div>
     </div>
 </template>
